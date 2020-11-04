@@ -77,4 +77,4 @@ This process installs a kernel specification that tells Jupyter (or JupyterLab) 
 ## Our focus
 We are focused on learning Julia for data science and machine learning tasks. A series of Jupyter notebooks will cover the necessary topics - fundamentals, data structures, language features, functions, arrays, linear algebra, statistics, plots, DataFrames, etc.
 
-Go to the [Notebooks](https://github.com/tirthajyoti/Julia-basics/tree/master/Notebooks) section to find exciting Jupyter notebooks covering fundamentals of Julia data structures, syntax, arrays, linear algebra, and statistics.
+Go to the [Notebooks](https://github.com/Bhard27/Data-Science-with-Julia/tree/main/Notebooks) section to find exciting Jupyter notebooks covering fundamentals of Julia data structures, syntax, arrays, linear algebra, and statistics.
