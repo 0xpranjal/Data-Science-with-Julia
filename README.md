@@ -14,7 +14,6 @@ The inception of this programming language can be traced back to 2009. The lead 
 
 Since then, the language has become very popular among the programmers as it provides the ease of many high-level languages with a better performance. The language was launched under a liberal MIT license. This means that Julia is an open source language which can be used and/or modified without any right infringement.
 
-[See this article](https://www.cleverism.com/skills-and-tools/julia/)
 
 ### Why is it awesome?
 
