@@ -53,7 +53,7 @@ end
 size(head)
 
 # ╔═╡ 7e298212-2c28-11eb-1937-6da236e006c4
-size(sample)
+size(sample)1
 
 # ╔═╡ 0cb10d72-2c54-11eb-271d-65fb7a901d99
 [head head]	
@@ -63,7 +63,7 @@ size([head head]	)
 
 # ╔═╡ 4683763a-2c55-11eb-104e-19208524d241
 [
-	head 								reverse(head, dims=2)
+	head_of_image 								reverse(head, dims=2)
 	reverse(head, dims=1)				reverse(reverse(head, dims=1), dims=2)
 ]
 
@@ -103,7 +103,7 @@ end
 [head redify.(head)]
 
 # ╔═╡ 6431ba06-2c6f-11eb-1ae5-f7137ae8d7ca
-function decimate(arr, ratio=200) 
+function decimate(arr, ratio=5) 
                return arr[1:ratio:end, 1:ratio:end]
 end
 
