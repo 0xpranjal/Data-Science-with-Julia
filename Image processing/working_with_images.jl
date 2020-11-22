@@ -44,10 +44,44 @@ typeof(sample[100,2000])
 sample[1:1000, 1:400]
 
 # ╔═╡ 31cd3ed8-2c26-11eb-134a-6da9c52ec0e3
-
+begin
+	(h, w) = size(sample)
+	head = sample[(h ÷ 2):h, (w ÷ 15) : (9w ÷ 10)]
+end
 
 # ╔═╡ 31b01088-2c26-11eb-1be8-45b998ce8abf
+size(head)
 
+# ╔═╡ 7e298212-2c28-11eb-1937-6da236e006c4
+size(sample)
+
+# ╔═╡ 0cb10d72-2c54-11eb-271d-65fb7a901d99
+[head head]	
+
+# ╔═╡ 0c929338-2c54-11eb-0a80-8f2a60126f7c
+size([head head]	)
+
+# ╔═╡ 4683763a-2c55-11eb-104e-19208524d241
+[
+	head 								reverse(head, dims=2)
+	reverse(head, dims=1)				reverse(reverse(head, dims=1), dims=2)
+]
+
+# ╔═╡ 4663200c-2c55-11eb-2e3c-f192353ec5ee
+new_image = copy(head)
+
+# ╔═╡ f468b144-2c57-11eb-00e8-493b369df3d5
+red = RGB(1,0,0)
+
+# ╔═╡ f44d49c4-2c57-11eb-3040-718f4eb1c84b
+for i in 1:600
+	for j in 1:800
+		new_image[i, j] = red
+	end
+end
+
+# ╔═╡ 30bf21be-2c58-11eb-0687-f9f2fc088704
+new_image
 
 # ╔═╡ Cell order:
 # ╟─951b2abc-2c22-11eb-12d0-2da8f728c21e
@@ -64,3 +98,11 @@ sample[1:1000, 1:400]
 # ╠═1f246908-2c26-11eb-2b1a-f7156e7e9eca
 # ╠═31cd3ed8-2c26-11eb-134a-6da9c52ec0e3
 # ╠═31b01088-2c26-11eb-1be8-45b998ce8abf
+# ╠═7e298212-2c28-11eb-1937-6da236e006c4
+# ╠═0cb10d72-2c54-11eb-271d-65fb7a901d99
+# ╠═0c929338-2c54-11eb-0a80-8f2a60126f7c
+# ╠═4683763a-2c55-11eb-104e-19208524d241
+# ╠═4663200c-2c55-11eb-2e3c-f192353ec5ee
+# ╠═f468b144-2c57-11eb-00e8-493b369df3d5
+# ╠═f44d49c4-2c57-11eb-3040-718f4eb1c84b
+# ╠═30bf21be-2c58-11eb-0687-f9f2fc088704
