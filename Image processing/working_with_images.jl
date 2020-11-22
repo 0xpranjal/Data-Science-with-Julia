@@ -80,8 +80,38 @@ for i in 1:600
 	end
 end
 
-# ╔═╡ 30bf21be-2c58-11eb-0687-f9f2fc088704
-new_image
+# ╔═╡ f028a2e0-2c63-11eb-0de3-75711d8ea77e
+begin
+	new_image1 = copy(new_image)
+	new_image1[100:400, 1:100] .= RGB(0,1,0)
+	new_image1
+end
+
+# ╔═╡ 6f742772-2c64-11eb-13cb-893268548e75
+function redify(color)
+	return RGB(color.r,0,0)
+end
+
+# ╔═╡ 6f500f2c-2c64-11eb-2afc-ddf7a0382753
+begin
+	color = RGB(0.8, 0.6, 0.7)
+	
+	[color, redify(color)]
+end
+
+# ╔═╡ 6f3041ec-2c64-11eb-298d-3531b0dc6723
+[head redify.(head)]
+
+# ╔═╡ 6431ba06-2c6f-11eb-1ae5-f7137ae8d7ca
+function decimate(arr, ratio=200) 
+               return arr[1:ratio:end, 1:ratio:end]
+end
+
+# ╔═╡ 6f0ded10-2c64-11eb-3282-634c28e64d92
+begin
+	poor_doggo = decimate(new_image, 10)
+	poor_doggo
+end
 
 # ╔═╡ Cell order:
 # ╟─951b2abc-2c22-11eb-12d0-2da8f728c21e
@@ -105,4 +135,9 @@ new_image
 # ╠═4663200c-2c55-11eb-2e3c-f192353ec5ee
 # ╠═f468b144-2c57-11eb-00e8-493b369df3d5
 # ╠═f44d49c4-2c57-11eb-3040-718f4eb1c84b
-# ╠═30bf21be-2c58-11eb-0687-f9f2fc088704
+# ╠═f028a2e0-2c63-11eb-0de3-75711d8ea77e
+# ╠═6f742772-2c64-11eb-13cb-893268548e75
+# ╠═6f500f2c-2c64-11eb-2afc-ddf7a0382753
+# ╠═6f3041ec-2c64-11eb-298d-3531b0dc6723
+# ╠═6431ba06-2c6f-11eb-1ae5-f7137ae8d7ca
+# ╠═6f0ded10-2c64-11eb-3282-634c28e64d92
