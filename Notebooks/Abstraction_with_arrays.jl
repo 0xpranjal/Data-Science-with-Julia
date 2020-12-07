@@ -6,8 +6,8 @@ using InteractiveUtils
 
 # ╔═╡ 6835245a-3797-11eb-3243-492891215d32
 begin
-	#using Pkg
-	#Pkg.add.(["Images", "ImageIO", "ImageMagick"])
+	using Pkg
+	Pkg.add.(["Images", "ImageIO", "ImageMagick"])
 	using Images
 end
 
@@ -63,16 +63,16 @@ fill(element_2, 3, 4)
 typeof(element_2)
 
 # ╔═╡ 099e7ae0-3797-11eb-09ee-fd28652f27be
-download("https://duckduckgo.com/?q=one+number&t=brave&iax=images&ia=images&iai=https%3A%2F%2F101clipart.com%2Fwp-content%2Fuploads%2F13%2FNumber%25201%2520Clipart%252018.png")
+image = load(download("http://pngimg.com/uploads/number1/number1_PNG14870.png"))
 
 # ╔═╡ 0980d8dc-3797-11eb-1f3e-9dc23a78dfbe
-
+image_element = image
 
 # ╔═╡ 0968ee16-3797-11eb-1943-65b63e79a3c2
-
+fill(image_element, 3, 4)
 
 # ╔═╡ a175ac2c-376c-11eb-0626-59e27c5c6dc3
-keeptrack = [typeof(1), typeof(1.0), typeof("one"), typeof(1 // 1)]
+keeptrack = [typeof(1), typeof(1.0), typeof("one"), typeof(1 // 1) ,typeof(image_element)]
 
 # ╔═╡ a12753e4-376c-11eb-23cb-43d73f933fe8
 typeof(keeptrack)
